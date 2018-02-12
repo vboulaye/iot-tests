@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.env.linux": {
+        "PATH": "/home/uvba7442/.platformio/penv/bin:/home/uvba7442/.platformio/penv:/home/uvba7442/.rvm/gems/ruby-2.3.3/bin:/home/uvba7442/.rvm/gems/ruby-2.3.3@global/bin:/home/uvba7442/.rvm/rubies/ruby-2.3.3/bin:/home/uvba7442/apps/torch/install/bin:/home/uvba7442/.jenv/shims:./bin:/usr/local/bin:/usr/local/sbin:/home/uvba7442/.dotfiles/bin:/home/uvba7442/.dotfiles/bin:/home/uvba7442/.dotfiles/mybin:/tmp/tools/svnkit-1.7.8/bin:/tmp/tools/apache-tomcat-7.0.35/bin:/tmp/tools/jdk8/bin:/tmp/tools/git/bin:/home/uvba7442/apps/torch/install/bin:/home/uvba7442/bin:/home/uvba7442/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/snap/bin:/home/uvba7442/.rvm/bin:/home/uvba7442/apps/bin:/home/uvba7442/apps/maven/bin:/home/uvba7442/.jenv/bin:/home/uvba7442/apps/thunderbird:/home/uvba7442/apps/idea/bin:/home/uvba7442/apps/walkmod/bin:/home/uvba7442/.rvm/bin:/home/uvba7442/apps/openshift:/home/uvba7442/.zgen/unixorn/docker-helpers.zshplugin-master/bin:/home/uvba7442/.fzf/bin:/home/uvba7442/.rvm/bin",
+        "PLATFORMIO_CALLER": "vscode"
+    }
+}
