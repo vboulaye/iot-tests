@@ -6,6 +6,8 @@ bought from [banggood](https://www.banggood.com/ESP32-Development-Board-WiFiBlue
 or from 
 https://fr.aliexpress.com/item/Official-DOIT-ESP32-Development-Board-WiFi-Bluetooth-Ultra-Low-Power-Consumption-Dual-Core-ESP-32-ESP/32776342162.html
 
+orfrom 
+https://fr.aliexpress.com/item/ESP-32-ESP-32S-D-veloppement-Conseil-WiFi-Bluetooth-Ultra-Faible-consommation-lectricit-Double-Noyaux-ESP32/32965963703.html?spm=a2g0s.9042311.0.0.40696c37xr5YFu
 
 ## description 
 
@@ -24,5 +26,11 @@ Strong function with support LWIP protocol, Freertos
 Supporting three modes: AP, STA, and AP+STA
 Supporting Lua program, easily to develop
 Development Board: https://github.com/Nicholas3388/LuaNode 
+
+### layout information
+
+see https://docs.zerynth.com/latest/official/board.zerynth.doit_esp32/docs/index.html
+
+![layout](doitesp32pin.jpg)
 
  
