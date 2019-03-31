@@ -29,6 +29,10 @@ CRGB leds[NUM_LEDS];
 #define FRAMES_PER_SECOND  120
 
 void setup() {
+  
+
+  Serial.begin(115200);
+
   delay(3000); // 3 second delay for recovery
   
   // tell FastLED about the LED strip configuration
@@ -106,8 +110,11 @@ void juggle() {
 
 // List of patterns to cycle through.  Each is defined as a separate function below.
 typedef void (*SimplePatternList[])();
-SimplePatternList gPatterns = { rainbow, rainbowWithGlitter, confetti, sinelon, juggle, bpm };
+SimplePatternList gPatterns = { rainbow, rainbowWithGlitter, 
+    confetti, sinelon, juggle, bpm };
   
+String gPatternsNames[] = { "rainbow", "rainbowWithGlitter", 
+    "confetti", "sinelon", "juggle", "bpm" };
 
 #define ARRAY_SIZE(A) (sizeof(A) / sizeof((A)[0]))
 
@@ -115,15 +122,19 @@ void nextPattern()
 {
   // add one to the current pattern number, and wrap around at the end
   gCurrentPatternNumber = (gCurrentPatternNumber + 1) % ARRAY_SIZE( gPatterns);
+  Serial.println(gPatternsNames[gCurrentPatternNumber]);
 }
 
 void loop()
 {
+  fill_rainbow( leds, NUM_LEDS, gHue, 7);
+  
   // Call the current pattern function once, updating the 'leds' array
   gPatterns[gCurrentPatternNumber]();
 
   // send the 'leds' array out to the actual LED strip
   FastLED.show();  
+
   // insert a delay to keep the framerate modest
   FastLED.delay(1000/FRAMES_PER_SECOND); 
 

@@ -43,7 +43,7 @@
 CRGB matrixleds[NUMMATRIX];
 
 FastLED_NeoMatrix *matrix = new FastLED_NeoMatrix(matrixleds, mw, mh, mw / 8, 1,
-                                                  NEO_MATRIX_TOP + NEO_MATRIX_RIGHT +
+                                                  NEO_MATRIX_BOTTOM + NEO_MATRIX_LEFT +
                                                       NEO_MATRIX_ROWS + NEO_MATRIX_ZIGZAG);
 
 const uint16_t colors[] = {
@@ -65,8 +65,8 @@ void loop()
 {
   matrix->fillScreen(0);
   matrix->setCursor(x, 0);
-  matrix->print(F("Howdy"));
-  if (--x < -36)
+  matrix->print(F("Galipette"));
+  if (--x < -46)
   {
     x = matrix->width();
     if (++pass >= 3)
@@ -74,5 +74,5 @@ void loop()
     matrix->setTextColor(colors[pass]);
   }
   matrix->show();
-  delay(100);
+  delay(50);
 }
