@@ -1,3 +1,5 @@
+#include <RCSwitch.h>
+
 /*
   Example for receiving
 
@@ -13,7 +15,7 @@
   http://hack.lenotta.com
 */
 
-#include <RCSwitch.h>
+
 // Format the output:
 
 void output(unsigned long decimal, unsigned int length, unsigned int delay, unsigned int* raw, unsigned int protocol) {
@@ -22,7 +24,8 @@ void output(unsigned long decimal, unsigned int length, unsigned int delay, unsi
     Serial.print("Unknown encoding.");
   } else {
     char* b = dec2binWzerofill(decimal, length);
-    Serial.print("Decimal: ");
+    Serial.print(millis());
+    Serial.print(" Decimal: ");
     Serial.print(decimal);
     Serial.print(" (");
     Serial.print( length );
@@ -100,9 +103,10 @@ void setup() {
   mySwitch.enableReceive(0);  // Receiver on inerrupt 0 => that is pin #2
 }
 
+
+
 void loop() {
   output(mySwitch.getReceivedValue(), mySwitch.getReceivedBitlength(), mySwitch.getReceivedDelay(), mySwitch.getReceivedRawdata(), mySwitch.getReceivedProtocol());
   mySwitch.resetAvailable();
 
 }
-
